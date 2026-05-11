@@ -134,21 +134,19 @@
 
 # 
 
-# | Priority | Condition | Action |
+# | Priority | Condition                  | Action            |
 
-# |----------|------------|---------|
+# |----------|----------------------------|-------------------|
 
-# | 1 | All known cells are clean | `STOP` |
+# | 1        | All known cells are clean  | `STOP`            |
 
-# | 2 | Current cell is dirty | `SUCK` |
+# | 2        | Current cell is dirty      | `SUCK`            |
 
-# | 3 | Unvisited neighbor exists | `MOVE\_UNVISITED` |
+# | 3        | Unvisited neighbor exists  | `MOVE\_UNVISITED`  |
 
-# | 4 | Known dirty cell exists | `MOVE\_TO\_DIRTY` |
+# | 4        | Known dirty cell exists    | `MOVE\_TO\_DIRTY`   |
 
-# | 5 | Otherwise | `MOVE\_RANDOM` |
-
-# 
+# | 5        | Otherwise                  | `MOVE\_RANDOM`     |
 
 # 
 
@@ -165,10 +163,4 @@
 # python vacuum\_agent.py
 
 # ```
-
-# 
-
-# \---
-
-# 
 
