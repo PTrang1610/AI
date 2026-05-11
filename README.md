@@ -2,7 +2,7 @@
 
 # 
 
-# A simple Artificial Intelligence simulation of a smart vacuum-cleaning robot operating inside a \*\*3×3 grid environment\*\* using a \*\*Model-Based Reflex Agent\*\* architecture.
+# A simple Artificial Intelligence simulation of a smart vacuum-cleaning robot operating inside a \*\*3x3 grid environment\*\* using a \*\*Model-Based Reflex Agent\*\* architecture.
 
 # 
 
@@ -10,7 +10,7 @@
 
 # 
 
-# \# Overview
+# \## Overview
 
 # 
 
@@ -32,7 +32,7 @@
 
 # 
 
-# \# Agent Decision Cycle
+# \## Agent Decision Cycle
 
 # 
 
@@ -62,13 +62,13 @@
 
 # 
 
-# \# Agent Architecture
+# \## Agent Architecture
 
 # 
 
 # ```text
 
-# Environment (3×3 Grid)
+# Environment (3x3 Grid)
 
 # &#x20;       │
 
@@ -102,7 +102,7 @@
 
 # 
 
-# \# Internal Memory Features
+# \## Internal Memory Features
 
 # 
 
@@ -126,7 +126,7 @@
 
 # 
 
-# \# Rule Priority System
+# \## Rule Priority System
 
 # 
 
@@ -134,19 +134,19 @@
 
 # 
 
-# | Priority | Condition                  | Action            |
+# | Priority | Condition                 | Action           |
 
-# |----------|----------------------------|-------------------|
+# |----------|---------------------------|------------------|
 
-# | 1        | All known cells are clean  | `STOP`            |
+# | 1        | All known cells are clean | `STOP`           |
 
-# | 2        | Current cell is dirty      | `SUCK`            |
+# | 2        | Current cell is dirty     | `SUCK`           |
 
-# | 3        | Unvisited neighbor exists  | `MOVE\_UNVISITED`  |
+# | 3        | Unvisited neighbor exists | `MOVE\_UNVISITED` |
 
-# | 4        | Known dirty cell exists    | `MOVE\_TO\_DIRTY`   |
+# | 4        | Known dirty cell exists   | `MOVE\_TO\_DIRTY`  |
 
-# | 5        | Otherwise                  | `MOVE\_RANDOM`     |
+# | 5        | Otherwise                 | `MOVE\_RANDOM`    |
 
 # 
 
@@ -154,7 +154,7 @@
 
 # 
 
-# \# Run the Simulation
+# \## Run the Simulation
 
 # 
 
