@@ -28,10 +28,6 @@
 
 # 
 
-# The robot continuously updates its internal model of the environment and chooses actions based on prioritized rules.
-
-# 
-
 # \---
 
 # 
@@ -182,20 +178,6 @@
 
 # 
 
-# \# Requirements
-
-# 
-
-# \- Python 3.8+
-
-# \- No external libraries required
-
-# 
-
-# \---
-
-# 
-
 # \# Run the Simulation
 
 # 
@@ -237,56 +219,4 @@
 # \---
 
 # 
-
-# \# Example Applications
-
-# 
-
-# Concepts used in this project are commonly applied in:
-
-# 
-
-# \- robotic vacuum cleaners
-
-# \- warehouse robots
-
-# \- autonomous navigation systems
-
-# \- smart home automation
-
-# \- industrial robotics
-
-# 
-
-# \---
-
-# 
-
-# \# Learning Objectives
-
-# 
-
-# After completing this project, you should understand:
-
-# 
-
-# \- how reflex agents operate
-
-# \- how memory improves agent behavior
-
-# \- how rule-based AI systems make decisions
-
-# \- how agents interact with environments
-
-# 
-
-# \---
-
-# 
-
-# \# Author
-
-# 
-
-# Developed as an educational Artificial Intelligence project.
 
