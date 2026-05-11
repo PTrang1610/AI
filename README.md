@@ -1,208 +1,292 @@
-# Vacuum Robot - Model Based Reflex Agent
+# \# Vacuum Robot - Model Based Reflex Agent
 
+# 
 
+# A simple Artificial Intelligence simulation of a smart vacuum-cleaning robot operating inside a \*\*3×3 grid environment\*\* using a \*\*Model-Based Reflex Agent\*\* architecture.
 
-A simple AI simulation of a smart vacuum-cleaning robot operating in a 3×3 grid environment using a \*\*Model-Based Reflex Agent\*\* architecture.
+# 
 
+# \---
 
+# 
 
-Instead of reacting blindly, the robot keeps an internal memory of explored cells and previously observed dirt locations to make smarter decisions while cleaning the environment.
+# \# Overview
 
+# 
 
+# This project demonstrates how an intelligent agent can:
 
-\---
+# 
 
+# \- perceive its environment
 
+# \- maintain an internal state (memory)
 
-The AI cycle:
+# \- apply rule-based decision making
 
+# \- perform actions autonomously
 
+# 
 
-```text
+# The robot continuously updates its internal model of the environment and chooses actions based on prioritized rules.
 
-Perceive → Update Memory → Choose Rule → Execute Action
+# 
 
-```
+# \---
 
+# 
 
+# \# Agent Decision Cycle
 
-At every step, the robot:
+# 
 
+# ```text
 
+# Perceive → Update Memory → Choose Rule → Execute Action
 
-1\. Observes its current position
+# ```
 
-2\. Updates its internal map
+# 
 
-3\. Selects the most appropriate rule
+# At every step, the agent:
 
-4\. Performs an action
+# 
 
+# 1\. Observes the current environment
 
+# 2\. Updates its internal memory
 
-The robot does \*\*not\*\* know the whole environment initially — it only learns through exploration
+# 3\. Matches the best rule
 
+# 4\. Executes an action
 
+# 
 
-\---
+# \---
 
+# 
 
+# \# Agent Architecture
 
-\# Agent Architecture
+# 
 
+# ```text
 
+# Environment (3×3 Grid)
 
-```text
+# &#x20;       │
 
-Environment (3×3 Grid)
+# &#x20;       ▼
 
-&#x20;       │
+# ┌────────────────────────────┐
 
-&#x20;       ▼
+# │        VacuumAgent         │
 
-┌────────────────────────────┐
+# │                            │
 
-│        VacuumAgent         │
+# │  update\_state()            │
 
-│                            │
+# │  rule\_match()              │
 
-│  update\_state()            │
+# │  get\_action\_target()       │
 
-│  rule\_match()              │
+# └────────────────────────────┘
 
-│  get\_action\_target()       │
+# &#x20;       │
 
-└────────────────────────────┘
+# &#x20;       ▼
 
-&#x20;       │
+# &#x20;  Execute Action
 
-&#x20;       ▼
+# ```
 
-&#x20;Execute Action
+# 
 
-```
+# \---
 
+# 
 
+# \# Internal Memory Features
 
-The internal memory allows the agent to:
+# 
 
-\- remember visited cells
+# The agent maintains an internal representation of the environment to:
 
-\- track dirty locations
+# 
 
-\- avoid unnecessary movement
+# \- remember visited cells
 
-\- stop automatically when everything is clean
+# \- track dirty locations
 
+# \- reduce unnecessary movement
 
+# \- improve cleaning efficiency
 
-\---
+# \- stop automatically when all cells are clean
 
+# 
 
+# \---
 
-\# Rule Priority System
+# 
 
+# \# Rule Priority System
 
+# 
 
-The agent chooses actions using prioritized IF-THEN rules.
+# The robot selects actions using prioritized IF-THEN rules.
 
+# 
 
+# | Priority | Condition | Action |
 
-| Priority | Condition | Action |
+# |----------|------------|---------|
 
-|----------|------------|---------|
+# | 1 | All known cells are clean | `STOP` |
 
-| 1 | All known cells are clean | `STOP` |
+# | 2 | Current cell is dirty | `SUCK` |
 
-| 2 | Current cell is dirty | `SUCK` |
+# | 3 | Unvisited neighbor exists | `MOVE\_UNVISITED` |
 
-| 3 | Unvisited neighbor exists | `MOVE\_UNVISITED` |
+# | 4 | Known dirty cell exists | `MOVE\_TO\_DIRTY` |
 
-| 4 | Known dirty cell exists | `MOVE\_TO\_DIRTY` |
+# | 5 | Otherwise | `MOVE\_RANDOM` |
 
-| 5 | Otherwise | `MOVE\_RANDOM` |
+# 
 
+# This strategy helps the robot behave efficiently while minimizing random movement.
 
+# 
 
-This priority system ensures the robot behaves efficiently and avoids random movement whenever possible.
+# \---
 
+# 
 
+# \# Project Structure
 
-\---
+# 
 
+# ```text
 
+# vacuum-agent/
 
+# ├── vacuum\_agent.py
 
+# └── README.md
 
-\# Project Structure
+# ```
 
+# 
 
+# \---
 
-```text
+# 
 
-vacuum-agent/
+# \# Requirements
 
-├── vacuum\_agent.py
+# 
 
-└── README.md
+# \- Python 3.8+
 
-```
+# \- No external libraries required
 
+# 
 
+# \---
 
-\---
+# 
 
+# \# Run the Simulation
 
+# 
 
-\# Run the Simulation
+# ```bash
 
+# python vacuum\_agent.py
 
+# ```
 
-\## Requirements
+# 
 
-\- Python 3.8+
+# \---
 
-\- No external libraries required
+# 
 
+# \# AI Concepts Demonstrated
 
+# 
 
-\## Run
+# This project introduces several important Artificial Intelligence concepts:
 
+# 
 
+# \- Intelligent Agents
 
-```bash
+# \- Model-Based Reflex Agents
 
-python vacuum\_agent.py
+# \- Rule-Based Systems
 
-```
+# \- State Representation
 
+# \- Environment Perception
 
+# \- Autonomous Decision Making
 
-\---
+# 
 
+# \---
 
+# 
 
-\# AI Concepts Used
+# \# Example Applications
 
+# 
 
+# Concepts used in this project are commonly applied in:
 
-This project demonstrates several introductory Artificial Intelligence concepts:
+# 
 
+# \- robotic vacuum cleaners
 
+# \- warehouse robots
 
-\- Intelligent Agents
+# \- autonomous navigation systems
 
-\- Model-Based Reflex Agents
+# \- smart home automation
 
-\- Rule-Based Systems
+# \- industrial robotics
 
-\- State Representation
+# 
 
-\- Environment Perception
+# \---
 
+# 
 
+# \# Learning Objectives
 
-\---
+# 
 
+# After completing this project, you should understand:
 
+# 
+
+# \- how reflex agents operate
+
+# \- how memory improves agent behavior
+
+# \- how rule-based AI systems make decisions
+
+# \- how agents interact with environments
+
+# 
+
+# \---
+
+# 
+
+# \# Author
+
+# 
+
+# Developed as an educational Artificial Intelligence project.
 
