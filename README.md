@@ -150,28 +150,6 @@
 
 # 
 
-# This strategy helps the robot behave efficiently while minimizing random movement.
-
-# 
-
-# \---
-
-# 
-
-# \# Project Structure
-
-# 
-
-# ```text
-
-# vacuum-agent/
-
-# ├── vacuum\_agent.py
-
-# └── README.md
-
-# ```
-
 # 
 
 # \---
@@ -187,32 +165,6 @@
 # python vacuum\_agent.py
 
 # ```
-
-# 
-
-# \---
-
-# 
-
-# \# AI Concepts Demonstrated
-
-# 
-
-# This project introduces several important Artificial Intelligence concepts:
-
-# 
-
-# \- Intelligent Agents
-
-# \- Model-Based Reflex Agents
-
-# \- Rule-Based Systems
-
-# \- State Representation
-
-# \- Environment Perception
-
-# \- Autonomous Decision Making
 
 # 
 
